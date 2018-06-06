@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -35,8 +36,20 @@
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
-                    <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+
+                    @if (Context.Session.GetInt32("USER_LOGIN_KEY") == null)
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
+
+
+                    }
+
+
                 </ul>
             </div>
         </div>

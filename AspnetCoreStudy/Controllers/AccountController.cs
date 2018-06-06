@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AspnetCoreStudy.DataContext;
 using AspnetCoreStudy.Models;
 using AspnetCoreStudy.ViewModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspnetCoreStudy.Controllers
@@ -51,6 +52,8 @@ namespace AspnetCoreStudy.Controllers
 
                     if(user != null)
                     {
+                        //HttpContext.Session.SetInt32(key, value);
+                        HttpContext.Session.SetInt32("USER_LOGIN_KEY", user.UserNo);
 
                         // 로그인에 성공했을 때
                         return RedirectToAction("LoginSucess", "Home"); //로그인 성공 페이지로 이동
@@ -67,6 +70,19 @@ namespace AspnetCoreStudy.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            // 특정 세션만 삭제
+            HttpContext.Session.Remove("USER_LOGIN_KEY");
+
+            //// 세션 전체 삭제
+            //HttpContext.Session.Clear();
+
+            return RedirectToAction("Index", "Home"); 
+        }
+
 
         /// <summary>
         /// 회원 가입

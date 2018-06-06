@@ -9,3 +9,6 @@
 */**/obj/Debug
 */**/obj/Release
 .vs/
+AspnetCoreStudy/obj/
+AspnetCoreStudy/bin/
+information.txt

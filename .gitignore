@@ -9,3 +9,6 @@ AspnetCoreStudy/obj/Debug/netcoreapp2.0/AspnetCoreStudy.dll
 AspnetCoreStudy/obj/Debug/netcoreapp2.0/AspnetCoreStudy.pdb
 AspnetCoreStudy/bin/Debug/netcoreapp2.0/AspnetCoreStudy.pdb
 AspnetCoreStudy/bin/Debug/netcoreapp2.0/AspnetCoreStudy.dll
+AspnetCoreStudy/DataContext/AspnetNoteDbContext.cs
+AspnetCoreStudy/bin/
+AspnetCoreStudy/obj/

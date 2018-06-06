@@ -14,7 +14,16 @@ namespace AspnetCoreStudy.DataContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = myServerAddress; Database = myDataBase; User Id = myUsername;Password = myPassword;");
+
+            //절대경로//
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\cpc\Documents\GitHub\AspnetCoreStudy\infomation.txt");
+
+            string serverHost = lines[0];
+            string databaseName = lines[1];
+            string userId = lines[2];
+            string userPassword = lines[3];
+
+            optionsBuilder.UseSqlServer(@"Server = "+serverHost+"; Database = "+ databaseName + "; User Id = "+ userId + ";Password = "+ userPassword + ";");
         }
     }
 }

@@ -16,14 +16,14 @@ namespace AspnetCoreStudy.DataContext
         {
 
             //절대경로//
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\cpc\Documents\GitHub\AspnetCoreStudy\infomation.txt");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\cpc\Documents\GitHub\AspnetCoreStudy\information.txt");
 
             string serverHost = lines[0];
             string databaseName = lines[1];
             string userId = lines[2];
             string userPassword = lines[3];
 
-            optionsBuilder.UseSqlServer(@"Server = "+serverHost+"; Database = "+ databaseName + "; User Id = "+ userId + ";Password = "+ userPassword + ";");
+            optionsBuilder.UseSqlServer(@"Server = " + serverHost + "; Database = " + databaseName + "; User Id = " + userId + ";Password = " + userPassword + ";");
         }
     }
 }

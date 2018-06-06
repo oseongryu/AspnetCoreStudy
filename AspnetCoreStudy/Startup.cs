@@ -27,6 +27,16 @@ namespace AspnetCoreStudy
             // Session
             // Web API MiddleWare.
             services.AddMvc();
+
+            // DI 의존성 주입 -ASP.NET MVC 4, 5  + Unity(게임 x)을 사용해야 했음]
+
+            // Session - 서비스에 등록함
+            services.AddSession();
+
+            // Identity
+
+            // Web API 관련 기능
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +53,8 @@ namespace AspnetCoreStudy
             }
 
             app.UseStaticFiles();
-
+            // Application에서 사용함
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

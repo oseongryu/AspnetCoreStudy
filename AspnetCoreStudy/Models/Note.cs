@@ -14,13 +14,13 @@ namespace AspnetCoreStudy.Models
         /// <summary>
         /// 게시물 제목
         /// </summary>
-        [Required] //  Not Null 설정
+        [Required(ErrorMessage = "제목을 입력하세요.")] //  Not Null 설정
         public string NoteTitle { get; set; }
 
         /// <summary>
         /// 게시물 내용
         /// </summary>
-        [Required] //  Not Null 설정
+        [Required(ErrorMessage = "내용을 입력하세요.")] //  Not Null 설정
         public string NoteContents { get; set; }
 
         /// <summary>

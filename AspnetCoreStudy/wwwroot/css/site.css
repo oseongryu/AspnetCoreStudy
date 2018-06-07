@@ -6,6 +6,7 @@
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -34,6 +35,8 @@
     }
 }
 
+input,
+select,
 textarea {
-    max-width: 200px;
+    max-width: 280px;
 }

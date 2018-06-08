@@ -15,7 +15,14 @@
         {
         <tr>
             <td>@note.NoteNo</td>
-            <td>@note.NoteTitle</td>
+            <td>
+                @*http://www.example.com
+                http://www.example.com/{noteNo}
+                http://www.example.com/Note/Detail?noteNo=1*@
+                <a asp-controller="Note" asp-action="Detail" asp-route-noteNo="@note.NoteNo">
+                    @note.NoteTitle
+                </a>
+            </td>
             <td>@note.UserNo</td>
         </tr>
         }

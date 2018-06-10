@@ -1,0 +1,8 @@
+{
+    "version": "1.0.0",
+    "directory": "wwwroot/lib",
+    "name": "asp.net",
+    "private": true,
+    "devDependencies": {
+    }
+}

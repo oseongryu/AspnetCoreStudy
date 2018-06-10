@@ -12,4 +12,6 @@
 AspnetCoreStudy/obj/
 AspnetCoreStudy/bin/
 AspnetCoreStudy/bower_components/
+AspnetCoreStudy/wwwroot/lib/jquery/
+AspnetCoreStudy/wwwroot/lib/trumbowyg/
 information.txt

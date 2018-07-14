@@ -1,6 +1,5 @@
 {
-  "name": "myproject",
-  "dependencies": {
-    "trumbowyg": "~2.10.0"
-  }
+    "name": "myproject",
+    "dependencies": {
+    }
 }
